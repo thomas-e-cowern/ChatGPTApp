@@ -7,3 +7,6 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
+
+CHAT_GPT_API_KEY = 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
+
