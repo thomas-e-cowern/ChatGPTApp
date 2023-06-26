@@ -32,6 +32,7 @@
 		4D6B066F2A49E5CE00D8677C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D6B06712A49E5CE00D8677C /* MacOSChatGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSChatGPT.entitlements; sourceTree = "<group>"; };
 		4D6B067D2A4A085A00D8677C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4D6B067E2A4A123D00D8677C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +78,7 @@
 		4D6B06552A49E5AF00D8677C /* iOSChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4D6B067E2A4A123D00D8677C /* Info.plist */,
 				4D6B06562A49E5AF00D8677C /* iOSChatGPTApp.swift */,
 				4D6B06582A49E5AF00D8677C /* ContentView.swift */,
 				4D6B065A2A49E5B200D8677C /* Assets.xcassets */,
@@ -268,6 +270,7 @@
 		};
 		4D6B06602A49E5B200D8677C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6B067D2A4A085A00D8677C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -324,6 +327,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOSChatGPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +355,7 @@
 		};
 		4D6B06612A49E5B200D8677C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6B067D2A4A085A00D8677C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -401,6 +406,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOSChatGPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +434,7 @@
 		};
 		4D6B06732A49E5CE00D8677C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6B067D2A4A085A00D8677C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -509,6 +516,7 @@
 		};
 		4D6B06742A49E5CE00D8677C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6B067D2A4A085A00D8677C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
