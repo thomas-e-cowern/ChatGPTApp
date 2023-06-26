@@ -94,3 +94,6 @@ ChatGPTApp.xcodeproj/project.xcworkspace/xcuserdata/thomascowern.xcuserdatad/Use
 
 # DSStore
 .DS_Store
+
+# Config file
+Config.xcconfig
