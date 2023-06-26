@@ -90,4 +90,4 @@ fastlane/test_output
 iOSInjectionProject/
 
 #userState
-.xcuserdatad/UserInterfaceState.xcuserstate
+ChatGPTApp.xcodeproj/project.xcworkspace/xcuserdata/thomascowern.xcuserdatad/UserInterfaceState.xcuserstate
