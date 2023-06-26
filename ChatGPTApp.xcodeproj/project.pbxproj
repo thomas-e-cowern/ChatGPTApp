@@ -31,7 +31,6 @@
 		4D6B066C2A49E5CE00D8677C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D6B066F2A49E5CE00D8677C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D6B06712A49E5CE00D8677C /* MacOSChatGPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOSChatGPT.entitlements; sourceTree = "<group>"; };
-		4D6B067C2A4A067200D8677C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +115,6 @@
 		4D6B06752A49E60400D8677C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				4D6B067C2A4A067200D8677C /* Config.xcconfig */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
