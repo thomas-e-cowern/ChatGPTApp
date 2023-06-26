@@ -15,6 +15,8 @@
 		4D6B066B2A49E5CD00D8677C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6B066A2A49E5CD00D8677C /* ContentView.swift */; };
 		4D6B066D2A49E5CE00D8677C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6B066C2A49E5CE00D8677C /* Assets.xcassets */; };
 		4D6B06702A49E5CE00D8677C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6B066F2A49E5CE00D8677C /* Preview Assets.xcassets */; };
+		4D6B06782A49E7A100D8677C /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D6B06772A49E7A100D8677C /* OpenAISwift */; };
+		4D6B067B2A49E7D300D8677C /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D6B067A2A49E7D300D8677C /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6B06782A49E7A100D8677C /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D6B067B2A49E7D300D8677C /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 				4D6B06552A49E5AF00D8677C /* iOSChatGPT */,
 				4D6B06672A49E5CD00D8677C /* MacOSChatGPT */,
 				4D6B06542A49E5AF00D8677C /* Products */,
+				4D6B06792A49E7D300D8677C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +119,13 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		4D6B06792A49E7D300D8677C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +142,9 @@
 			dependencies = (
 			);
 			name = iOSChatGPT;
+			packageProductDependencies = (
+				4D6B06772A49E7A100D8677C /* OpenAISwift */,
+			);
 			productName = iOSChatGPT;
 			productReference = 4D6B06532A49E5AF00D8677C /* iOSChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +162,9 @@
 			dependencies = (
 			);
 			name = MacOSChatGPT;
+			packageProductDependencies = (
+				4D6B067A2A49E7D300D8677C /* OpenAISwift */,
+			);
 			productName = MacOSChatGPT;
 			productReference = 4D6B06662A49E5CD00D8677C /* MacOSChatGPT.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +196,9 @@
 				Base,
 			);
 			mainGroup = 4D6B06482A49DE5800D8677C;
+			packageReferences = (
+				4D6B06762A49E7A100D8677C /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 4D6B06542A49E5AF00D8677C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -589,6 +610,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4D6B06762A49E7A100D8677C /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4D6B06772A49E7A100D8677C /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D6B06762A49E7A100D8677C /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+		4D6B067A2A49E7D300D8677C /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D6B06762A49E7A100D8677C /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D6B06492A49DE5800D8677C /* Project object */;
 }
