@@ -91,3 +91,6 @@ iOSInjectionProject/
 
 #userState
 ChatGPTApp.xcodeproj/project.xcworkspace/xcuserdata/thomascowern.xcuserdatad/UserInterfaceState.xcuserstate
+
+# DSStore
+.DS_Store
