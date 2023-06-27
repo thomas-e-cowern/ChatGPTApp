@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension String {
+    
+    var isEmptOrWhiteSpaces: Bool {
+        self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+}
