@@ -10,6 +10,7 @@
 		4D2A8F332A4B5E8C008D2940 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F322A4B5E8C008D2940 /* String+Extensions.swift */; };
 		4D2A8F362A4B6E62008D2940 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F352A4B6E62008D2940 /* CoreDataManager.swift */; };
 		4D2A8F372A4B6E6B008D2940 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F352A4B6E62008D2940 /* CoreDataManager.swift */; };
+		4D2A8F3B2A4B6F57008D2940 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F392A4B6F57008D2940 /* HistoryModel.xcdatamodeld */; };
 		4D6B06572A49E5AF00D8677C /* iOSChatGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6B06562A49E5AF00D8677C /* iOSChatGPTApp.swift */; };
 		4D6B06592A49E5AF00D8677C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6B06582A49E5AF00D8677C /* ContentView.swift */; };
 		4D6B065B2A49E5B200D8677C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6B065A2A49E5B200D8677C /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		4D2A8F322A4B5E8C008D2940 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		4D2A8F352A4B6E62008D2940 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		4D2A8F3A2A4B6F57008D2940 /* HistoryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HistoryModel.xcdatamodel; sourceTree = "<group>"; };
 		4D6B06532A49E5AF00D8677C /* iOSChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6B06562A49E5AF00D8677C /* iOSChatGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChatGPTApp.swift; sourceTree = "<group>"; };
 		4D6B06582A49E5AF00D8677C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 				4D2A8F352A4B6E62008D2940 /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		4D2A8F382A4B6F38008D2940 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D2A8F392A4B6F57008D2940 /* HistoryModel.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4D6B06482A49DE5800D8677C = {
@@ -142,6 +152,7 @@
 		4D6B06752A49E60400D8677C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4D2A8F382A4B6F38008D2940 /* Models */,
 				4D2A8F342A4B6E43008D2940 /* Managers */,
 				4D2A8F312A4B5E6C008D2940 /* Extensions */,
 				4D6B067D2A4A085A00D8677C /* Config.xcconfig */,
@@ -270,6 +281,7 @@
 				4D6B06592A49E5AF00D8677C /* ContentView.swift in Sources */,
 				4D8AFDBF2A4A15FA0000FAA5 /* MainView.swift in Sources */,
 				4D2A8F362A4B6E62008D2940 /* CoreDataManager.swift in Sources */,
+				4D2A8F3B2A4B6F57008D2940 /* HistoryModel.xcdatamodeld in Sources */,
 				4D6B06572A49E5AF00D8677C /* iOSChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +688,19 @@
 			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		4D2A8F392A4B6F57008D2940 /* HistoryModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D2A8F3A2A4B6F57008D2940 /* HistoryModel.xcdatamodel */,
+			);
+			currentVersion = 4D2A8F3A2A4B6F57008D2940 /* HistoryModel.xcdatamodel */;
+			path = HistoryModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4D6B06492A49DE5800D8677C /* Project object */;
 }
