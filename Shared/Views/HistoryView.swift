@@ -16,11 +16,11 @@ struct HistoryView: View {
     
     var body: some View {
         List(historyItemResults) { historyItem in
-            Text(historyItem.question ?? "")
+            Text(historyItem.question ?? "No question")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .containerShape(Rectangle())
                 .onTapGesture {
-                    model.query = QueryModel(question: historyItem.question ?? "", answer: historyItem.answer ?? "")
+                    model.query = QueryModel(question: historyItem.question ?? "", answer: historyItem.answer ?? "No answer")
                     dismiss()
                 }
         }
