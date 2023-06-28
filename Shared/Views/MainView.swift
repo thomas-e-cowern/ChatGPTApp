@@ -57,7 +57,6 @@ struct MainView: View {
         openAI.sendCompletion(with: chatText, maxTokens: 500) { result in
             switch result {
             case .success(let success):
-                print(success)
                 let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
                 
                 let query = QueryModel(question: chatText, answer: answer)
