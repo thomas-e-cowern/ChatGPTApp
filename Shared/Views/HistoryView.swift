@@ -9,10 +9,14 @@ import SwiftUI
 
 struct HistoryView: View {
     
-    @State private var isPresented: Bool = false
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "dateCreated", ascending: true)]) private var historyItemResults: FetchedResults<HistoryItem>
     
     var body: some View {
-        Text("History View")
+        List(historyItemResults) { historyItem in
+            Text(historyItem.question ?? "")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .containerShape(Rectangle())
+        }
     }
 }
 
