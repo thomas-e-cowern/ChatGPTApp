@@ -10,8 +10,9 @@ import OpenAISwift
 
 struct MainView: View {
     
+    @EnvironmentObject private var model: AggregateModel
+    
     @State private var chatText: String = ""
-    @State private var answers: [String] = []
     
     let openIAKey = Bundle.main.infoDictionary?["CHAT_GPT_KEY"]
     
@@ -21,8 +22,12 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            List(answers, id: \.self) { answer in
-                Text(answer)
+            List(model.queries) { query in
+                VStack {
+                    Text(query.question)
+                        .fontWeight(.bold)
+                    Text(query.answer)
+                }
             }
             Spacer()
             HStack {
@@ -54,7 +59,18 @@ struct MainView: View {
             case .success(let success):
                 print(success)
                 let answer = success.choices?.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-                answers.append(answer)
+                
+                let query = QueryModel(question: chatText, answer: answer)
+                DispatchQueue.main.async {
+                    model.queries.append(query)
+                }
+                
+                do {
+                    try model.saveQuery(query)
+                } catch {
+                    print(error.localizedDescription)
+                }
+                
             case .failure(let failure):
                 print(failure)
             }
@@ -65,5 +81,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(AggregateModel())
     }
 }

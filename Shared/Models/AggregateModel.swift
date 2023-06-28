@@ -20,5 +20,4 @@ class AggregateModel: ObservableObject {
         historyItem.dateCreated = Date()
         try viewContext.save()
     }
-    
 }
