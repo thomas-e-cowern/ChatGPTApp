@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct HistoryView: View {
+    
+    @State private var isPresented: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("History View")
     }
 }
 
 struct HistoryView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryView()
+            .environment(\.managedObjectContext, CoreDataManager.shared.persistentContainer.viewContext)
+            .environmentObject(AggregateModel())
     }
 }
