@@ -9,6 +9,9 @@ import SwiftUI
 
 struct HistoryView: View {
     
+    @EnvironmentObject private var model: AggregateModel
+    @Environment(\.dismiss) private var dismiss
+    
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "dateCreated", ascending: true)]) private var historyItemResults: FetchedResults<HistoryItem>
     
     var body: some View {
@@ -16,6 +19,10 @@ struct HistoryView: View {
             Text(historyItem.question ?? "")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .containerShape(Rectangle())
+                .onTapGesture {
+                    model.query = QueryModel(question: historyItem.question ?? "", answer: historyItem.answer ?? "")
+                    dismiss()
+                }
         }
     }
 }

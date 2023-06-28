@@ -10,6 +10,7 @@ import Foundation
 class AggregateModel: ObservableObject {
     
     @Published var queries: [QueryModel] = []
+    @Published var query = QueryModel(question: "", answer: "")
     
     func saveQuery(_ query: QueryModel) throws {
         

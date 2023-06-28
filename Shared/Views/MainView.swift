@@ -23,12 +23,17 @@ struct MainView: View {
     var body: some View {
         VStack {
             List(model.queries) { query in
-                VStack {
+                VStack(alignment: .leading) {
                     Text(query.question)
                         .fontWeight(.bold)
                     Text(query.answer)
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding([.bottom], 10)
+                .listRowSeparator(.hidden)
+                
             }
+            .listStyle(.plain)
             Spacer()
             HStack {
                 TextField("Search...", text: $chatText)
@@ -47,6 +52,9 @@ struct MainView: View {
             }
   
 
+        }
+        .onChange(of: model.query) { query in
+            model.queries.append(query)
         }
     }
     
