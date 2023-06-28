@@ -17,6 +17,8 @@
 		4D2A8F412A4C6252008D2940 /* AggregateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F3F2A4C6252008D2940 /* AggregateModel.swift */; };
 		4D2A8F442A4C6A6B008D2940 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F432A4C6A6B008D2940 /* HistoryView.swift */; };
 		4D2A8F452A4C6A6B008D2940 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F432A4C6A6B008D2940 /* HistoryView.swift */; };
+		4D2A8F462A4C7C8B008D2940 /* HistoryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F392A4B6F57008D2940 /* HistoryModel.xcdatamodeld */; };
+		4D2A8F472A4C7CA4008D2940 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A8F322A4B5E8C008D2940 /* String+Extensions.swift */; };
 		4D6B06572A49E5AF00D8677C /* iOSChatGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6B06562A49E5AF00D8677C /* iOSChatGPTApp.swift */; };
 		4D6B06592A49E5AF00D8677C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6B06582A49E5AF00D8677C /* ContentView.swift */; };
 		4D6B065B2A49E5B200D8677C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D6B065A2A49E5B200D8677C /* Assets.xcassets */; };
@@ -38,6 +40,7 @@
 		4D2A8F3C2A4C616C008D2940 /* QueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
 		4D2A8F3F2A4C6252008D2940 /* AggregateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AggregateModel.swift; sourceTree = "<group>"; };
 		4D2A8F432A4C6A6B008D2940 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		4D2A8F4A2A4C7DCA008D2940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4D6B06532A49E5AF00D8677C /* iOSChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6B06562A49E5AF00D8677C /* iOSChatGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChatGPTApp.swift; sourceTree = "<group>"; };
 		4D6B06582A49E5AF00D8677C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		4D6B06672A49E5CD00D8677C /* MacOSChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				4D2A8F4A2A4C7DCA008D2940 /* Info.plist */,
 				4D6B06682A49E5CD00D8677C /* MacOSChatGPTApp.swift */,
 				4D6B066A2A49E5CD00D8677C /* ContentView.swift */,
 				4D6B066C2A49E5CE00D8677C /* Assets.xcassets */,
@@ -317,6 +321,8 @@
 				4D6B066B2A49E5CD00D8677C /* ContentView.swift in Sources */,
 				4D8AFDC02A4A15FA0000FAA5 /* MainView.swift in Sources */,
 				4D2A8F372A4B6E6B008D2940 /* CoreDataManager.swift in Sources */,
+				4D2A8F472A4C7CA4008D2940 /* String+Extensions.swift in Sources */,
+				4D2A8F462A4C7C8B008D2940 /* HistoryModel.xcdatamodeld in Sources */,
 				4D2A8F412A4C6252008D2940 /* AggregateModel.swift in Sources */,
 				4D6B06692A49E5CD00D8677C /* MacOSChatGPTApp.swift in Sources */,
 				4D2A8F3E2A4C616C008D2940 /* QueryModel.swift in Sources */,
@@ -564,6 +570,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacOSChatGPT/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,6 +647,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacOSChatGPT/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
