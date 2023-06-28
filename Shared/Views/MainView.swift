@@ -22,18 +22,31 @@ struct MainView: View {
     
     var body: some View {
         VStack {
-            List(model.queries) { query in
-                VStack(alignment: .leading) {
-                    Text(query.question)
-                        .fontWeight(.bold)
-                    Text(query.answer)
+            ScrollView {
+                ScrollViewReader { proxy in
+                    ForEach(model.queries) { query in
+                        VStack(alignment: .leading) {
+                            Text(query.question)
+                                .fontWeight(.bold)
+                            Text(query.answer)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding([.bottom], 10)
+                        .id(query.id)
+                        .listRowSeparator(.hidden)
+                        
+                    }
+                    .listStyle(.plain)
+                    .onChange(of: model.queries) { query in
+                        if !model.queries.isEmpty {
+                            let lastQuery = model.queries[model.queries.endIndex - 1]
+                            withAnimation {
+                                proxy.scrollTo(lastQuery.id)
+                            }
+                        }
+                    }
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.bottom], 10)
-                .listRowSeparator(.hidden)
-                
             }
-            .listStyle(.plain)
             Spacer()
             HStack {
                 TextField("Search...", text: $chatText)
@@ -50,9 +63,10 @@ struct MainView: View {
                 .padding(.trailing, 10)
                 .disabled(isFormValid)
             }
-  
-
+            
+            
         }
+        .padding(10)
         .onChange(of: model.query) { query in
             model.queries.append(query)
         }
